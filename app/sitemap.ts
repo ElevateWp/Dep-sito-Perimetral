@@ -1,19 +1,18 @@
 import { MetadataRoute } from 'next';
-import { SERVICES, DENTISTS, BLOG_POSTS } from '@/lib/clinic-data';
+import { BLOG_POSTS } from '@/lib/clinic-data';
 import { BASE_URL } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const coreRoutes = [
     '',
+    '/testimonials',
     '/about',
-    '/dentists',
-    '/dental-implants',
-    '/root-canal',
-    '/teeth-whitening',
-    '/dental-cleaning',
-    '/braces',
-    '/cosmetic-dentistry',
-    '/emergency-dentist',
+    '/materiais-de-construcao',
+    '/tubos-de-concreto',
+    '/blocos-decorativos',
+    '/materiais-para-obras',
+    '/retirada-no-local',
+    '/entrega-de-materiais',
     '/book-appointment',
     '/contact',
     '/blog',
@@ -21,14 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}${route}/`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : route.includes('Urgência') || route.includes('book') ? 0.9 : 0.8,
-  }));
-
-  const dentistRoutes = DENTISTS.map((d) => ({
-    url: `${BASE_URL}/dentists/${d.slug}/`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: route === '' ? 1.0 : route.includes('emergency') || route.includes('book') ? 0.9 : 0.8,
   }));
 
   const blogRoutes = BLOG_POSTS.map((post) => ({
@@ -38,5 +30,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...coreRoutes, ...dentistRoutes, ...blogRoutes];
+  return [...coreRoutes, ...blogRoutes];
 }

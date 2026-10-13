@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Roofing in Dublin, built on care and experience.';
+  const headline = 'Materiais de construção para o seu próximo projeto.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -111,8 +111,8 @@ export default function HomeHero() {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <Image
-        src="/images/roof-saffron-walden-1024x768-1.jpg"
-        alt="Slate roof installation in progress"
+        src="/images/deposito-fachada.jpg"
+        alt="Loja de materiais de construção Depósito Perimetral em Iguatu"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#E51B2B]" />
-              <span className="font-body text-[11px] text-[#6D696B] uppercase tracking-[0.14em]">
-                Dublin roofing specialists
+              <span aria-hidden="true" className="h-px w-8 bg-[#D92732]" />
+              <span className="font-body text-[11px] text-[#777171] uppercase tracking-[0.14em]">
+                Materiais de construção · Iguatu, Ceará
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#1C1A1B] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#292525] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['Roofing', 'care', 'experience.'].includes(word) ? 'text-[#E51B2B]' : ''}`}
+                      className={`inline-block will-change-transform ${['Materiais', 'construção', 'projeto.'].includes(word) ? 'text-[#D92732]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,33 +162,33 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              Our Dublin roofers bring over 10 years of experience to roof replacements, repairs and maintenance.
+              Encontre materiais para construção ou reforma. Compre na loja, retire no local ou consulte a opção de entrega.
             </p>
 
             <div
               ref={actionsRef}
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
-              <Button href="/book-appointment/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Request a Quote
+              <Button href="https://www.google.com/maps/search/?api=1&query=Rua+Jo%C3%A3o+Vicente+Alves+911+Iguatu+CE+63508-770+Brazil" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
+                Como chegar
               </Button>
               <Button
-                href={`tel:+35315563783`}
+                href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
               >
-                Call {CLINIC_INFO.contact.phone}
+                Ligar: {CLINIC_INFO.contact.phone}
               </Button>
             </div>
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#1C1A1B]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#292525]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#1C1A1B]">Open 24 hours</span>
+                <span className="font-medium text-[#292525]">Fechado · Abre às 7h na terça-feira</span>
               <span className="hidden sm:inline">•</span>
-              <span>Dublin, Ireland</span>
+              <span>Iguatu, Ceará, Brasil</span>
               <span className="hidden sm:inline">•</span>
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F7F7F7] border border-[#E2DFE0] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#1C1A1B] uppercase tracking-wider font-semibold">
-                Roof Replacements
+            <div className="p-6 sm:p-8 bg-[#F8F5F5] border border-[#E6DCDD] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#292525] uppercase tracking-wider font-semibold">
+                Sua loja local de materiais de construção
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#1C1A1B]/90 leading-relaxed">
-                <strong className="text-[#1C1A1B] font-semibold">CJ Roofing Services Ltd</strong> &mdash; trusted roof replacements across Dublin.
+              <p className="font-body text-13 sm:text-15 text-[#292525]/90 leading-relaxed">
+                <strong className="text-[#292525] font-semibold">Depósito Perimetral</strong> &mdash; compras na loja, retirada no local e entrega.
               </p>
-              <div className="pt-3 border-t border-[#E2DFE0] flex items-center justify-between text-13 font-body text-[#1C1A1B]/70">
-                <span>Here when you need us</span>
-                <span className="text-[#1C1A1B] font-semibold">Open 24 hours</span>
+              <div className="pt-3 border-t border-[#E6DCDD] flex items-center justify-between text-13 font-body text-[#292525]/70">
+                <span>Telefone</span>
+                <span className="text-[#292525] font-semibold">{CLINIC_INFO.contact.phone}</span>
               </div>
             </div>
           </div>

@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Roof Protection',
-    description: 'We assess the repair options and check that materials suit your existing roof.',
+    title: 'Materiais para o seu projeto',
+    description: 'Encontre produtos para diferentes etapas da construção e reforma.',
   },
   {
-    title: 'Careful Roof Inspections',
-    description: 'We inspect visible signs of leaks and agree the work scope before repairs begin.',
+    title: 'Compras na loja',
+    description: 'Visite a loja e conheça as opções para o seu projeto.',
   },
   {
-    title: 'Clear, Safe Service',
-    description: 'We explain the work clearly and agree access and safety arrangements in advance.',
+    title: 'Retirada no local',
+    description: 'Faça seu pedido e retire na loja.',
   },
   {
-    title: 'The Right Tools for the Job',
-    description: 'Our team uses tools suited to the roof type and access conditions at your property.',
+    title: 'Entrega disponível',
+    description: 'Fale com a loja para combinar a entrega dos materiais.',
   },
 ];
 
@@ -31,10 +31,10 @@ export default function HomeWhyUs() {
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Our Approach
+                Nossa loja
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why Choose CJ Roofing Services
+                Opções de compra
               </h2>
 
               <div className="divide-y divide-mist">
@@ -57,7 +57,7 @@ export default function HomeWhyUs() {
             </AnimateOnScroll>
           </div>
 
-          {/* Roofing project photos */}
+          {/* Store and product photos */}
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="grid grid-cols-2 gap-3">
@@ -65,38 +65,38 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                    src="/images/m8.jpg"
-                      alt="Roofline on a residential property"
+                    src="/images/deposito-bloco-decorativo.jpg"
+                      alt="Bloco decorativo de concreto"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#1C1A1B]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Residential Roofing
+                  <div className="absolute bottom-3 left-3 bg-[#292525]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Materiais de construção
                   </div>
                 </div>
-                {/* Second roofing project image */}
+                {/* Second product image */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roofb3-1.jpg"
-                    alt="Tiled roof and gutter on a brick home"
+                    src="/images/deposito-tubos.jpg"
+                    alt="Tubos de concreto para construção"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
-                {/* Roofing work in progress */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F7F7F7] overflow-hidden border border-mist shadow-sm">
+                {/* Product photo */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F8F5F5] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/m9.jpg"
-                    alt="Roof underlay and battens during installation"
+                    src="/images/deposito-parede-decorativa.jpg"
+                    alt="Parede com acabamento decorativo"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#1C1A1B]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Roof Replacement
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#292525]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Acabamentos
                   </div>
                 </div>
               </div>
